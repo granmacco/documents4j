@@ -54,8 +54,9 @@ Function ConvertFile( inputFile, outputFile, formatEnumeration )
       wordDocument.ExportAsFixedFormat outputFile, _
                                        WdExportFormatPDF, _
                                        False, _
-                                       , , , , , , , , , , _
-                                       True
+                                       WdExportOptimizeForOnScreen, _ 
+									   , , , , , , , False, False, _
+                                       False
     Else
       wordDocument.SaveAs outputFile, formatEnumeration
     End If
